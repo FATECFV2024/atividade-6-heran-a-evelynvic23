@@ -35,13 +35,29 @@ public class Empregado {
     }
 
     public double calcularIrpf(){
-        double aux;
-        if(salario < 1800){
-            aux = 0.1 * salario;
-        }else{
-            aux = 0.27*salario;
+        double salario_d = salario-calcularInss();
+
+        if(salario_d<2259.21){
+            return 0;
         }
-        return (aux);
+
+        else if(salario_d >= 2259.21 && salario_d < 2826.66){
+            return(salario_d*0.075)- 158.40;
+        }
+
+        else if(salario_d >= 2826.66 && salario_d < 3751.06){
+            return(salario_d*0.15)- 381.44;
+
+        }
+        else if(salario_d >= 3751.06 && salario_d < 4664.69){
+            return(salario_d*0.225)- 662.77;
+        }
+
+        else{
+            return(salario_d*0.275)-896.00;
+        }
+
+
     }
 
     public double calcularInss(){
