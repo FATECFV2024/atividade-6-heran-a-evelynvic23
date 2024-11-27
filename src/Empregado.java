@@ -45,7 +45,21 @@ public class Empregado {
     }
 
     public double calcularInss(){
-        return (0.11*salario);
+        if(salario<1412.01){
+            return salario*0.075;
+        }
+        else if(salario>=1412.01 && salario < 2666.69){
+            return salario*0.09;
+        }
+        else if(salario >= 2666.69 && salario < 4000.04){
+            return salario * 0.12;
+        }
+        else if(salario >= 4000.04 && salario < 7786.03){
+            return salario*0.14;
+        }
+        else{
+            return 7786.03*0.14;
+        }
     }
 
 }   
