@@ -30,9 +30,8 @@ public class Empregado {
         return salario;
     }
 
-    public void setSalario(double salario){
-        this.salario = salario;
-    }
+    
+    
 
     public double calcularIrpf(){
         double salario_d = salario-calcularInss();

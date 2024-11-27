@@ -21,9 +21,10 @@ public class Mensalista extends Empregado{
             salario = 2500;
         }else if(cargo.equals("Pleno")){
             salario = 3500;
-        }else {
+        }else if(cargo.equals("Senior")){
             salario = 5500;
         }
+
     }
     
 }
