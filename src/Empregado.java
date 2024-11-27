@@ -22,12 +22,21 @@ public class Empregado {
         return endereco;
     }
     
-    public void getEndereco(String endereco){
+    public void setEndereco(String endereco){
         this.endereco = endereco;
     }
 
     public double getSalario(){
         return salario;
+
+    }
+
+
+
+    public void imprimirDados() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Endereço: " + endereco);
+        System.out.println("Salário: " + salario);
     }
 
     
